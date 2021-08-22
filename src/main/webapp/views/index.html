@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<div th:replace="/layout :: header"></div>
+<div class="container">
+
+
+    <h2 style="text-align: center">Show Employee</h2>
+
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Employee Code</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Salary</th>
+            <th>Branch</th>
+            <th colspan="2">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="emp : ${employees}">
+            <td th:text="${emp.employee_Code}"></td>
+            <td><a th:href="@{/view/{id}(id=${emp.id})}"><span th:text="${emp.name}"></span></a></td>
+            <td th:text="${emp.age}"></td>
+            <td th:text="${emp.salary}"></td>
+            <td th:text="${emp.branch.name_Br}"></td>
+            <td><a th:href="@{/edit/{id}(id=${emp.id})}" class="btn btn-warning">Edit</a></td>
+            <td><a th:href="@{/delete/{id}(id=${emp.id})}" class="btn btn-danger">Delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div th:replace="/layout :: footer"></div>
+</body>
+</html>
