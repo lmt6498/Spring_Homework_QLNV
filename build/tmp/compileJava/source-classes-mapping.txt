@@ -1,23 +1,25 @@
-models/Employee.java
- models.Employee
-controllers/EmployeeController.java
- controllers.EmployeeController
-services/IBranchService.java
- services.IBranchService
-services/IEmployeeService.java
- services.IEmployeeService
-services/BranchService.java
- services.BranchService
-models/Branch.java
- models.Branch
-services/EmployeeService.java
- services.EmployeeService
-services/IGeneralService.java
- services.IGeneralService
 repository/IEmployeeRepo.java
  repository.IEmployeeRepo
+services/IBranchService.java
+ services.IBranchService
 repository/IBranchRepo.java
  repository.IBranchRepo
+models/Branch.java
+ models.Branch
+services/IGeneralService.java
+ services.IGeneralService
+services/BranchService.java
+ services.BranchService
+validate/ValidateEmployeeCode.java
+ validate.ValidateEmployeeCode
+services/IEmployeeService.java
+ services.IEmployeeService
+models/Employee.java
+ models.Employee
+services/EmployeeService.java
+ services.EmployeeService
+controllers/EmployeeController.java
+ controllers.EmployeeController
 config/ApplicationInitializer.java
  config.ApplicationInitializer
 config/ApplicationConfig.java

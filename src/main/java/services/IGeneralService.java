@@ -6,5 +6,5 @@ public interface IGeneralService <T>{
     Iterable<T> findAll();
     Optional<T> findById(Integer id);
     void save(T t);
-    void delete(Integer id);
+    void delete(T t);
 }

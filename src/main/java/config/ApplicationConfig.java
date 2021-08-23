@@ -31,6 +31,7 @@ import services.BranchService;
 import services.EmployeeService;
 import services.IBranchService;
 import services.IEmployeeService;
+import validate.ValidateEmployeeCode;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -148,5 +149,10 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
     @Bean
     public IBranchService iRoleService(){
         return new BranchService();
+    }
+
+    @Bean
+    public ValidateEmployeeCode validateEmployeeCode(){
+        return new ValidateEmployeeCode();
     }
 }

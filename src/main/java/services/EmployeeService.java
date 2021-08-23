@@ -30,12 +30,17 @@ public class EmployeeService implements IEmployeeService {
     }
 
     @Override
-    public void delete(Integer id) {
-        employeeRepo.deleteById(id);
+    public void delete(Employee employee) {
+        employeeRepo.delete(employee);
     }
 
     @Override
     public Page<Employee> findAll(Pageable pageable) {
         return employeeRepo.findAll(pageable);
+    }
+
+    @Override
+    public Iterable<Employee> findAllByName(String name) {
+        return employeeRepo.findAllByName(name);
     }
 }

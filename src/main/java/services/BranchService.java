@@ -28,7 +28,7 @@ public class BranchService implements IBranchService {
     }
 
     @Override
-    public void delete(Integer id) {
-        branchRepo.deleteById(id);
+    public void delete(Branch branch) {
+        branchRepo.delete(branch);
     }
 }

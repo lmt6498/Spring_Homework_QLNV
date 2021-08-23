@@ -11,12 +11,12 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @NotEmpty
-    @Pattern(regexp = "^[a-zA-z0-9\\S]+$")
+    @Pattern(regexp = "^[FPT]+[\\d\\S]+$",message = "{error.employeeCode.pattern}")
     private String employee_Code;
-    @NotEmpty
-    @Pattern(regexp = "^[a-zA-z0-9\\S]+$")
+    @NotEmpty(message = "{error.blank}")
+    @Pattern(regexp = "[\\D]+$",message = "{error.name}")
     private String name;
-    @Min(18)
+    @Min(value = 18,message = "{error.age}")
     private Integer age;
     private Integer salary;
     @ManyToOne
